@@ -3,151 +3,99 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Six Doors Orient — Strategic Business Advisory</title>
-  <meta name="description" content="Six Doors Orient helps enterprises and innovators scale across APAC, the Middle East and Europe with market entry, enterprise GTM, and sustainability execution." />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Six Doors Orient — Business Strategy, AI & ESG</title>
+  <meta name="description" content="Six Doors Orient is a business strategy consulting firm helping enterprises and innovators scale growth, enable AI & digital transformation, and drive ESG outcomes across APAC, the Middle East, and Europe.">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for optional icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Top Bar -->
-  <header class="topbar">
-    <div class="wrap row">
-      <a class="brand" href="index.html">
-        <img src="assets/logo.png" alt="Six Doors Orient logo" />
-        <span>Six Doors Orient</span>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ====== HEADER ====== -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#">
+        <img src="assets/logo.png" alt="Six Doors Orient logo" class="brand-logo" />
+        <span class="brand-name">Six Doors Orient</span>
       </a>
-      <nav class="nav">
-        <a href="index.html#services">Services</a>
-        <a href="index.html#framework">Framework</a>
-        <a href="services.html">Case Studies</a>
-        <a href="#contact" class="btn sm">Contact</a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#what-we-do">What we do</a>
+        <a href="#team">Our team</a>
+        <a href="#cases">Case studies</a>
+        <a class="btn email" href="mailto:info@sixdoors.com.sg">
+          <i class="fa-regular fa-envelope"></i> Email us
+        </a>
       </nav>
-      <button class="menu" aria-label="Open menu" onclick="document.body.classList.toggle('nav-open')">☰</button>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+
+    <!-- Mobile menu -->
+    <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile">
+      <a href="#what-we-do">What we do</a>
+      <a href="#team">Our team</a>
+      <a href="#cases">Case studies</a>
+      <a class="btn email" href="mailto:info@sixdoors.com.sg">
+        <i class="fa-regular fa-envelope"></i> Email us
+      </a>
+    </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap grid hero-grid">
-      <div class="hero-copy">
-        <h1>We help ambitious companies <span class="grad">enter markets and scale</span>.</h1>
-        <p class="lead">Strategy, enterprise GTM and sustainability execution — from Singapore to Dubai and Shanghai, with delivery across APAC, EMEA and the Middle East.</p>
-        <div class="hero-ctas">
-          <a class="btn" href="#contact">Book an intro</a>
-          <a class="btn ghost" href="#services">See services</a>
+  <main id="main">
+    <!-- ====== HERO (split) ====== -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <!-- Left: copy -->
+        <div class="hero-copy">
+          <h1>
+            We turn <span class="grad">innovation & AI</span> into measurable growth.
+          </h1>
+          <p class="lead">
+            Six Doors Orient is a strategy consulting partner. We help enterprises and innovators
+            <strong>enter markets</strong>, scale <strong>digital/AI capability</strong>, and deliver
+            <strong>ESG impact</strong>—from Singapore to Dubai and Shanghai.
+          </p>
+
+          <ul class="bullets" id="what-we-do">
+            <li><i class="fa-solid fa-rocket"></i> Market entry & GTM playbooks</li>
+            <li><i class="fa-solid fa-brain"></i> AI & digital transformation sprints</li>
+            <li><i class="fa-solid fa-leaf"></i> ESG strategies & reporting readiness</li>
+          </ul>
+
+          <div class="cta-row">
+            <a class="btn cta" href="mailto:info@sixdoors.com.sg">
+              <i class="fa-regular fa-envelope"></i> Book an intro
+            </a>
+            <a class="btn ghost" href="#cases">See case studies</a>
+          </div>
         </div>
-        <ul class="chips">
-          <li>Market Entry & GTM</li>
-          <li>Partnerships & Distribution</li>
-          <li>Digital / AI Enablement</li>
-          <li>Decarbonization Programs</li>
-        </ul>
-      </div>
 
-      <aside class="hero-card">
-        <div class="card kpis">
-          <h3>Impact at a glance</h3>
-          <ul>
-            <li><strong>30+</strong> markets navigated</li>
-            <li><strong>250M+</strong> GMV influenced</li>
-            <li><strong>20–40%</strong> sales cycle reduction</li>
-            <li><strong>Scope 1–3</strong> decarb playbooks</li>
-          </ul>
-          <p class="sm">Combined experience across client programs.</p>
+        <!-- Right: image -->
+        <div class="hero-art">
+          <!-- Upload your image as /assets/hero.jpg -->
+          <img src="assets/hero.jpg" alt="Illustration of strategic growth and AI enablement" />
         </div>
-      </aside>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="section">
-    <div class="wrap">
-      <h2>Advisory & Execution</h2>
-      <div class="grid cards-3">
-        <article class="card">
-          <h3>Business Strategy</h3>
-          <p>Market sizing, competitive analysis, product strategy and pricing. From concept to launch with measurable milestones.</p>
-          <ul class="list">
-            <li>New Product Development</li>
-            <li>GTM & Enterprise Sales (MEDDICC)</li>
-            <li>Pricing & ROI Models</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>International Growth</h3>
-          <p>APAC, Middle East and Europe market entry with partner models and compliant operating frameworks.</p>
-          <ul class="list">
-            <li>Stakeholder & Territory Mapping</li>
-            <li>Channel & Distribution Playbooks</li>
-            <li>Risk & Regulatory Readiness</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>Sustainability</h3>
-          <p>Decarbonization roadmaps aligned to standards with supplier engagement and data instrumentation.</p>
-          <ul class="list">
-            <li>Scope 1–3 Strategy</li>
-            <li>Certification Advisory</li>
-            <li>Reporting & Disclosure</li>
-          </ul>
-        </article>
       </div>
-    </div>
-  </section>
+    </section>
+    <!-- End Hero -->
+  </main>
 
-  <!-- FRAMEWORK -->
-  <section id="framework" class="section tinted">
-    <div class="wrap">
-      <h2>The Six Doors Growth Framework</h2>
-      <p class="lead">A simple path to traction: <strong>Diagnose → Plan → Pilot → Scale</strong>. Repeatable sprints, clear owners, and KPIs that ladder to revenue or carbon outcomes.</p>
-
-      <div class="grid tiles">
-        <div class="tile"><span class="n">01</span><h4>Right Market</h4><p>Segment, prioritize, validate. Build entry criteria and no-go rules.</p></div>
-        <div class="tile"><span class="n">02</span><h4>Right Offer</h4><p>Value proposition, pricing, localization and readiness checklist.</p></div>
-        <div class="tile"><span class="n">03</span><h4>Right Channel</h4><p>Direct, partner, marketplace or hybrid—with clear economics.</p></div>
-        <div class="tile"><span class="n">04</span><h4>Right Motion</h4><p>Enterprise playbooks (MEDDICC), CRM hygiene and automation.</p></div>
-        <div class="tile"><span class="n">05</span><h4>Right Proof</h4><p>Pilot design, KPIs, success criteria and scale gates.</p></div>
-        <div class="tile"><span class="n">06</span><h4>Right Governance</h4><p>Operating model, dashboards, cadence and accountability.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TRUSTED / LOGOS -->
-  <section class="section">
-    <div class="wrap">
-      <h2>Trusted by leaders in hospitality, food-tech, travel and industrials</h2>
-      <div class="logos">
-        <div class="logo"></div><div class="logo"></div><div class="logo"></div><div class="logo"></div><div class="logo"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA / CONTACT -->
-  <section id="contact" class="cta">
-    <div class="wrap">
-      <div class="cta-card">
-        <h2>How can we help?</h2>
-        <p>Tell us your objective—new market, growth or decarbonization—and we’ll propose a pragmatic plan with milestones and KPIs.</p>
-        <div class="hero-ctas">
-          <a class="btn" href="mailto:info@sixdoors.com.sg">Email us</a>
-          <a class="btn ghost" href="mailto:info@sixdoors.com.sg?subject=Intro call">Book an intro</a>
-        </div>
-        <p class="sm muted">Six Doors Orient Pte. Ltd. • 160 Robinson Road #14-04, Singapore 068914 • UEN 201833848K</p>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="wrap row between">
-      <p>© <span id="y"></span> Six Doors Orient — Singapore • Dubai • Shanghai</p>
-      <p><a href="services.html">Case Studies</a></p>
-    </div>
-  </footer>
-
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    // Accessible mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const mobile = document.getElementById('mobile-menu');
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      document.body.classList.toggle('nav-open', !open);
+    });
+  </script>
 </body>
 </html>

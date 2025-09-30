@@ -3,70 +3,151 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Six Doors Orient – Strategic Business Advisory</title>
-  <meta name="description" content="Six Doors Orient helps corporates and innovators scale at the intersection of technology, digital transformation, and sustainability. Headquartered in Singapore with reach across Dubai and Shanghai." />
+  <title>Six Doors Orient — Strategic Business Advisory</title>
+  <meta name="description" content="Six Doors Orient helps enterprises and innovators scale across APAC, the Middle East and Europe with market entry, enterprise GTM, and sustainability execution." />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="canonical" href="https://www.sixdoors.com.sg/">
-  <meta property="og:title" content="Six Doors Orient – Strategic Business Advisory">
-  <meta property="og:description" content="Advisory for technology, international growth, and sustainability. Singapore – Dubai – Shanghai.">
-  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-    <div class="wrap">
-      <div class="logo">
-        <img src="assets/logo.jpg" alt="Six Doors Orient logo">
-        <strong>Six Doors Orient</strong>
-      </div>
-      <nav>
-        <a class="active" href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="mailto:info@sixdoors.com.sg">Contact</a>
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="wrap row">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Six Doors Orient logo" />
+        <span>Six Doors Orient</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#framework">Framework</a>
+        <a href="services.html">Case Studies</a>
+        <a href="#contact" class="btn sm">Contact</a>
       </nav>
+      <button class="menu" aria-label="Open menu" onclick="document.body.classList.toggle('nav-open')">☰</button>
     </div>
   </header>
 
-  <div class="hero">
-    <img src="assets/logo.jpg" alt="" style="height:72px; width:auto;">
-    <h1>Strategic Business Advisory at the crossroads of Technology & Sustainability</h1>
-    <p class="sub">SINGAPORE – DUBAI – SHANGHAI</p>
-    <div class="cta"><a class="btn" href="mailto:info@sixdoors.com.sg">Contact us</a></div>
-  </div>
-
-  <main>
-    <section>
-      <h2>About Us</h2>
-      <p>Six Doors Orient is a global advisory firm headquartered in Singapore. We help corporates and innovators thrive at the intersection of <strong>technology, digital transformation, and sustainability</strong>. Large organizations often struggle to pivot quickly, while startups may lack the networks and resources to scale across borders. We bridge this gap by sourcing, integrating, and commercializing innovations within corporate value chains—supported by structured project management and training.</p>
-      <p><strong>For corporates:</strong> we accelerate transformation by bringing vetted, market-ready solutions. <strong>For startups:</strong> we enable access to markets, distribution, and financing networks—without compromising growth.</p>
-    </section>
-
-    <section>
-      <h2>Where We Operate</h2>
-      <div class="grid">
-        <div class="card"><h3>Singapore (HQ)</h3><p>Regional hub for APAC market entry, partnerships, and sustainability programs.</p></div>
-        <div class="card"><h3>Dubai</h3><p>Gateway to GCC expansion, procurement networks, and public–private initiatives.</p></div>
-        <div class="card"><h3>Shanghai</h3><p>China market insights, supplier discovery, and cross‑border commercialization.</p></div>
-        <div class="card"><h3>Global</h3><p>We operate worldwide through our partner network across EMEA, APAC, and the Americas.</p></div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap grid hero-grid">
+      <div class="hero-copy">
+        <h1>We help ambitious companies <span class="grad">enter markets and scale</span>.</h1>
+        <p class="lead">Strategy, enterprise GTM and sustainability execution — from Singapore to Dubai and Shanghai, with delivery across APAC, EMEA and the Middle East.</p>
+        <div class="hero-ctas">
+          <a class="btn" href="#contact">Book an intro</a>
+          <a class="btn ghost" href="#services">See services</a>
+        </div>
+        <ul class="chips">
+          <li>Market Entry & GTM</li>
+          <li>Partnerships & Distribution</li>
+          <li>Digital / AI Enablement</li>
+          <li>Decarbonization Programs</li>
+        </ul>
       </div>
-    </section>
 
-    <section>
-      <h2>Start Here</h2>
-      <p>Tell us your objectives (new market, new product, decarbonization, or GTM). We’ll propose a pragmatic plan with milestones and measurable outcomes.</p>
-      <p><a class="btn" href="services.html">Explore our services</a></p>
-    </section>
+      <aside class="hero-card">
+        <div class="card kpis">
+          <h3>Impact at a glance</h3>
+          <ul>
+            <li><strong>30+</strong> markets navigated</li>
+            <li><strong>250M+</strong> GMV influenced</li>
+            <li><strong>20–40%</strong> sales cycle reduction</li>
+            <li><strong>Scope 1–3</strong> decarb playbooks</li>
+          </ul>
+          <p class="sm">Combined experience across client programs.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
 
-    <section>
-      <h2>Contact</h2>
-      <p><strong>Email:</strong> <a href="mailto:info@sixdoors.com.sg">info@sixdoors.com.sg</a><br>
-      <strong>Address:</strong> Six Doors Orient Pte. Ltd., 160 Robinson Road, #14-04, Singapore 068914<br>
-      <strong>UEN:</strong> 201833848K</p>
-    </section>
-  </main>
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="wrap">
+      <h2>Advisory & Execution</h2>
+      <div class="grid cards-3">
+        <article class="card">
+          <h3>Business Strategy</h3>
+          <p>Market sizing, competitive analysis, product strategy and pricing. From concept to launch with measurable milestones.</p>
+          <ul class="list">
+            <li>New Product Development</li>
+            <li>GTM & Enterprise Sales (MEDDICC)</li>
+            <li>Pricing & ROI Models</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>International Growth</h3>
+          <p>APAC, Middle East and Europe market entry with partner models and compliant operating frameworks.</p>
+          <ul class="list">
+            <li>Stakeholder & Territory Mapping</li>
+            <li>Channel & Distribution Playbooks</li>
+            <li>Risk & Regulatory Readiness</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Sustainability</h3>
+          <p>Decarbonization roadmaps aligned to standards with supplier engagement and data instrumentation.</p>
+          <ul class="list">
+            <li>Scope 1–3 Strategy</li>
+            <li>Certification Advisory</li>
+            <li>Reporting & Disclosure</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRAMEWORK -->
+  <section id="framework" class="section tinted">
+    <div class="wrap">
+      <h2>The Six Doors Growth Framework</h2>
+      <p class="lead">A simple path to traction: <strong>Diagnose → Plan → Pilot → Scale</strong>. Repeatable sprints, clear owners, and KPIs that ladder to revenue or carbon outcomes.</p>
+
+      <div class="grid tiles">
+        <div class="tile"><span class="n">01</span><h4>Right Market</h4><p>Segment, prioritize, validate. Build entry criteria and no-go rules.</p></div>
+        <div class="tile"><span class="n">02</span><h4>Right Offer</h4><p>Value proposition, pricing, localization and readiness checklist.</p></div>
+        <div class="tile"><span class="n">03</span><h4>Right Channel</h4><p>Direct, partner, marketplace or hybrid—with clear economics.</p></div>
+        <div class="tile"><span class="n">04</span><h4>Right Motion</h4><p>Enterprise playbooks (MEDDICC), CRM hygiene and automation.</p></div>
+        <div class="tile"><span class="n">05</span><h4>Right Proof</h4><p>Pilot design, KPIs, success criteria and scale gates.</p></div>
+        <div class="tile"><span class="n">06</span><h4>Right Governance</h4><p>Operating model, dashboards, cadence and accountability.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUSTED / LOGOS -->
+  <section class="section">
+    <div class="wrap">
+      <h2>Trusted by leaders in hospitality, food-tech, travel and industrials</h2>
+      <div class="logos">
+        <div class="logo"></div><div class="logo"></div><div class="logo"></div><div class="logo"></div><div class="logo"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section id="contact" class="cta">
+    <div class="wrap">
+      <div class="cta-card">
+        <h2>How can we help?</h2>
+        <p>Tell us your objective—new market, growth or decarbonization—and we’ll propose a pragmatic plan with milestones and KPIs.</p>
+        <div class="hero-ctas">
+          <a class="btn" href="mailto:info@sixdoors.com.sg">Email us</a>
+          <a class="btn ghost" href="mailto:info@sixdoors.com.sg?subject=Intro call">Book an intro</a>
+        </div>
+        <p class="sm muted">Six Doors Orient Pte. Ltd. • 160 Robinson Road #14-04, Singapore 068914 • UEN 201833848K</p>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer">
-    <div class="wrap small">© <span id="y"></span> Six Doors Orient • Singapore</div>
+    <div class="wrap row between">
+      <p>© <span id="y"></span> Six Doors Orient — Singapore • Dubai • Shanghai</p>
+      <p><a href="services.html">Case Studies</a></p>
+    </div>
   </footer>
+
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>

@@ -1,97 +1,116 @@
-/* Six Doors Orient — responsive landing */
+/* ==============
+   Six Doors Orient — Header + Split Hero
+   Color palette (Coolors): 132A13, 31572C, 4F772D, 90A955, ECF39E
+   Fonts: Inter + Manrope
+   ============== */
 
 :root{
-  --card:#fff;
-  --muted:#6b7280;
-  --brand:#1f7a6b;           /* deep teal */
-  --brand-2:#0a8edd;         /* blue accent */
-  --tint:#f6f8fb;
+  /* Brand palette */
+  --green-900:#132A13;   /* deep */
+  --green-700:#31572C;   /* navbar/bg */
+  --green-600:#4F772D;   /* primary button */
+  --green-400:#90A955;   /* accents */
+  --green-200:#ECF39E;   /* soft highlight */
+
+  --ink:#0F1420;
+  --muted:#667085;
+  --card:#ffffff;
   --radius:14px;
-  --shadow:0 10px 30px rgba(0,0,0,.08);
-  --wrap:1120px;
+  --shadow:0 10px 28px rgba(17,24,39,.12);
+  --wrap:1200px;
 }
 
 *{box-sizing:border-box}
 html,body{margin:0}
-body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0e1014;background:#fff;line-height:1.6}
+body{
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--ink);
+  line-height:1.6;
+  background:#fff;
+}
+
+/* Accessibility */
+.skip-link{
+  position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+}
+.skip-link:focus{left:16px;top:12px;width:auto;height:auto;background:#fff;border:2px solid var(--green-600);padding:6px 10px;z-index:1000}
 
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
-.row{display:flex;gap:20px;align-items:center}
-.row.between{justify-content:space-between}
-.grid{display:grid;gap:24px}
-.grid.hero-grid{grid-template-columns:1.2fr .8fr}
-.grid.cards-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-.grid.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}
-.section{padding:72px 0}
-.section.tinted{background:var(--tint)}
-.lead{font-size:1.125rem;color:#3b4150}
-.sm{font-size:.9rem}
-.muted{color:var(--muted)}
-.btn{display:inline-block;padding:12px 18px;border-radius:10px;background:var(--brand);color:#fff;text-decoration:none;font-weight:600}
-.btn:hover{opacity:.92}
-.btn.ghost{background:#fff;color:var(--brand);border:2px solid var(--brand)}
-.btn.sm{padding:8px 12px;border-radius:8px}
-.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
-.list{margin:14px 0 0;padding-left:18px}
 
-/* Topbar */
-.topbar{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #eee}
-.topbar .wrap{height:64px}
-.brand{display:flex;gap:10px;align-items:center;color:#111;text-decoration:none;font-weight:700}
-.brand img{height:34px;width:auto}
-.nav{display:flex;gap:18px}
-.nav a{color:#111;text-decoration:none;font-weight:600}
-.nav a.btn{margin-left:8px}
-.menu{display:none;margin-left:auto;font-size:24px;background:none;border:none}
+/* ===== Header ===== */
+.site-header{
+  position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #E5E7EB;
+}
+.header-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.brand-logo{height:40px;width:auto}
+.brand-name{font-family:Manrope,Inter,sans-serif;font-weight:700;font-size:18px}
 
-/* Hero */
+.nav{display:flex;gap:22px;align-items:center}
+.nav a{color:var(--ink);text-decoration:none;font-weight:600}
+.nav a:hover{color:var(--green-700)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+.btn.email{background:var(--green-600);color:#fff}
+.btn.email:hover{filter:brightness(.96)}
+.btn.ghost{border:2px solid var(--green-600);color:var(--green-600);background:#fff}
+.btn.ghost:hover{background:var(--green-200)}
+
+.nav-toggle{display:none;background:none;border:0;width:40px;height:40px;position:relative}
+.nav-toggle span{position:absolute;left:8px;right:8px;height:3px;background:#111;border-radius:2px;transition:.25s}
+.nav-toggle span:nth-child(1){top:12px}
+.nav-toggle span:nth-child(2){top:19px}
+.nav-toggle span:nth-child(3){top:26px}
+body.nav-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+body.nav-open .nav-toggle span:nth-child(2){opacity:0}
+body.nav-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+.mobile-nav{display:none;flex-direction:column;gap:10px;padding:10px 20px 16px;border-bottom:1px solid #E5E7EB;background:#fff}
+.mobile-nav a{padding:8px 0;text-decoration:none;color:var(--ink);font-weight:600}
+
+/* ===== Hero (split) ===== */
 .hero{
   background:
-   radial-gradient(1200px 600px at 10% -10%, #eaf6ff 0, transparent 60%),
-   radial-gradient(1000px 500px at 100% 0, #e9fff6 0, transparent 55%),
-   #fff;
-  padding:56px 0 28px;
+    radial-gradient(900px 420px at 10% -20%, #ECF39E55 0%, transparent 60%),
+    radial-gradient(900px 420px at 110% 0%, #90A95540 0%, transparent 55%),
+    #fff;
+  padding:64px 0 48px;
 }
-.hero h1{font-size:clamp(28px,4.8vw,48px);line-height:1.15;margin:0 0 10px}
-.grad{background:linear-gradient(90deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero-ctas{display:flex;gap:12px;margin:16px 0 8px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0;padding:0;list-style:none}
-.chips li{font-size:.9rem;background:#f1f5f9;border:1px solid #e5e7eb;padding:8px 10px;border-radius:999px}
-.hero-card .card.kpis h3{margin:0 0 12px}
-.hero-card .card.kpis ul{margin:0;padding-left:18px}
-.hero-card .card.kpis li{margin:4px 0}
+.hero-grid{display:grid;gap:28px;grid-template-columns:1.1fr .9fr;align-items:center}
 
-/* Framework tiles */
-#framework h2{margin:0 0 6px}
-.tiles .tile{background:#fff;border:1px solid #eef2f7;border-radius:14px;padding:18px 16px;box-shadow:var(--shadow)}
-.tiles .tile .n{display:inline-block;font-weight:700;color:var(--brand-2);margin-bottom:6px}
-
-/* Logos */
-.logos{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:16px}
-.logo{height:56px;border-radius:10px;background:linear-gradient(135deg,#f1f5f9,#e5e7eb)}
-
-/* CTA */
-.cta{background:linear-gradient(180deg,#fff,#f7fbff)}
-.cta-card{max-width:840px;margin:0 auto;text-align:center;background:#fff;border:1px solid #eef2f7;border-radius:16px;padding:28px;box-shadow:var(--shadow)}
-
-/* Footer */
-.footer{border-top:1px solid #eceff3;padding:18px 0;background:#fff}
-.footer p{margin:6px 0;color:#4b5563}
-
-/* Responsive */
-@media (max-width:1024px){
-  .grid.hero-grid{grid-template-columns:1fr}
-  .grid.cards-3{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .grid.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .logos{grid-template-columns:repeat(4,1fr)}
+.hero-copy h1{
+  font-family:Manrope,Inter,sans-serif;
+  font-size:clamp(28px,4.8vw,48px);
+  line-height:1.12;margin:0 0 10px;color:#111;
 }
-@media (max-width:820px){
+.grad{
+  background:linear-gradient(90deg,var(--green-600),var(--green-400));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.lead{font-size:1.125rem;color:#3C4759;margin:6px 0 14px}
+.bullets{list-style:none;padding:0;margin:0 0 14px;display:grid;gap:8px}
+.bullets li{display:flex;gap:10px;align-items:center}
+.bullets i{color:var(--green-600)}
+
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.btn.cta{background:var(--green-700);color:#fff}
+.btn.cta:hover{filter:brightness(.95)}
+
+.hero-art img{
+  width:100%;height:auto;display:block;border-radius:18px;
+  box-shadow:var(--shadow);
+  background:#f6f7f9;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px){
   .nav{display:none}
-  .menu{display:block}
-  body.nav-open .nav{display:flex;position:absolute;top:64px;left:0;right:0;background:#fff;padding:14px 20px;border-bottom:1px solid #eee}
+  .nav-toggle{display:block}
+  body.nav-open .mobile-nav{display:flex}
+  .hero-grid{grid-template-columns:1fr}
 }
-@media (max-width:560px){
-  .grid.cards-3{grid-template-columns:1fr}
-  .grid.tiles{grid-template-columns:1fr}
-  .logos{grid-template-columns:repeat(3,1fr)}
+
+@media (max-width: 560px){
+  .header-inner{height:64px}
+  .brand-name{font-size:16px}
+  .btn{padding:9px 12px}
 }
